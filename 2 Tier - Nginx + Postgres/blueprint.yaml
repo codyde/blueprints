@@ -1,0 +1,21 @@
+name: 2 Tier - Nginx + Postgres
+version: 1
+formatVersion: 1
+inputs: {}
+resources:
+  Nginx:
+    type: Cloud.Machine
+    properties:
+      image: 'ubuntu'
+      flavor: 'small'
+      cloudConfig: |
+        packages:
+          - nginx
+  Postgres:
+    type: Cloud.Machine
+    properties:
+      image: 'ubuntu'
+      flavor: 'small'
+      cloudConfig: |
+        packages: 
+          - postgresql
